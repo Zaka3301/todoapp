@@ -3,7 +3,7 @@ import React, {useState, useEffect} from'react'
 
 export default function Header(props){
 
-    const[time, setTime] = useState(new Date);
+    const[time, setTime] = useState(new Date());
     useEffect(() => {
 
         const interval = setInterval(() => {
@@ -14,17 +14,12 @@ export default function Header(props){
         
     }, [])
 
-    const hours = time.getHours();
-    const minutes = time.getMinutes();
-    const seconds = time.getSeconds();
-    const thedate = time.getDate();
-    const month   = time.getMonth();
-    const year    = time.getFullYear();
+
 
     return (
         <View style = {styles.header}>
             {/* <Text style = {styles.date}> {thedate}/{month}/{year} </Text> */}
-            <Text style= {styles.clock}> {hours}:{minutes}: {seconds}</Text>
+            <Text style= {styles.clock}> {time.getHours()}:{time.getMinutes()}: {time.getSeconds()}</Text>
         </View>
     )
 }
