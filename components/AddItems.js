@@ -3,7 +3,7 @@
     import { StyleSheet, Text, ScrollView, View, FlatList, TouchableOpacity, Alert, TextInput } from 'react-native';
     import Icon from 'react-native-vector-icons/MaterialIcons';
 
-    export default function AddItems({dataList, addFunction}){
+    export default function AddItems({ dataList, addFunction}){
 
 
         const [ toggle, setToggle] = useState(false)
@@ -23,7 +23,7 @@
         
 
             const newItem = {
-                // id: Math.random(),
+                id: dataList.length,
                 title: title,
                 details: detail,
                 isDone: false
@@ -31,7 +31,7 @@
             }
 
             addFunction(newItem);
-            console.log(dataList)
+            // console.log(dataList)
             setToggle(!toggle);
 
             

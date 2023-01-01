@@ -16,6 +16,7 @@ export default function Header(props){
 
 
 
+
     return (
         <View style = {styles.header}>
             {/* <Text style = {styles.date}> {thedate}/{month}/{year} </Text> */}
